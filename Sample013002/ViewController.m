@@ -250,6 +250,54 @@
     }
     
     
+#pragma mark - for
+    
+    for (int i = 0; i < 10; i++) {
+        
+        NSLog(@"for - %d", i);
+        
+    }
+    
+#pragma mark - while
+    
+    int ii = 0;
+    
+    while(ii < 10) {
+        
+        NSLog(@"while - %d", ii);
+        ii ++;
+        
+    }
+    
+#pragma mark - NSMutableArray
+    
+    NSMutableArray* arr = [NSMutableArray array];
+    
+    [arr addObject:@"Hello"];
+    [arr addObject:@"hoge hoge"];
+    [arr addObject:@"hi!"];
+    
+    NSString *str2 = [arr objectAtIndex:1]; // "hogehoge"
+    
+    NSLog(@"%@", str2);
+    
+    // 要素の列挙
+	for (id item in arr) {
+		NSLog(@">> %@", item);
+	}
+    
+
+    NSMutableArray *arrA = [NSMutableArray arrayWithObjects:
+                            @"AAA", @"BBB", @"CCC", @"DDD", nil];
+    
+    // 要素の列挙
+	for (id item in arrA) {
+		NSLog(@">> %@", item);
+	}
+    
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
